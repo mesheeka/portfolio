@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Weather from './Weather.js';
+import fetchJsonp from '../node_modules/fetch-jsonp/build/fetch-jsonp.js';
 
 class WeatherPage extends Component {
 	constructor(props) {
@@ -8,12 +9,18 @@ class WeatherPage extends Component {
 	}
 
 	componentDidMount() {
-		var url = 'http://api.openweathermap.org/data/2.5/weather?lat=34.4291785&lon=-119.77912140000001&APPID=d16348db256c190293c8ae15fd7c859a&units=imperial';
-		fetch(url).then(data => data.json())
-				  .then(weatherData => this.setState({city:weatherData.name,
-													  icon:`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`,
-													  temp:weatherData.main.temp,
-													  weather:weatherData.weather[0].description}));
+		let key = '23fc19243ee40ba80cb288832a838160';
+		let lat = '34.4291785';
+		let lon = '-119.77912140000001';
+		let url = `https://api.darksky.net/forecast/${key}/${lat},${lon}?exclude=[minutely,hourly,daily,flags]`;
+		fetchJsonp(url).then(data => data.json())
+				  .then(weatherData => this.setState({dump:weatherData,
+				  									  temp:weatherData.currently.temperature,
+				  									  summary:weatherData.currently.summary,
+				  									  icon:weatherData.currently.icon,
+				  									  city:'Goleta'
+				  									  }));
+			
 		
 	}
 	render() {
