@@ -1,0 +1,14 @@
+
+<!-- saved from url=(0011)about:blank -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><div id="react-dev-utils-webpack-hot-dev-client-overlay-div" style="position: fixed; box-sizing: border-box; left: 0px; top: 0px; right: 0px; bottom: 0px; width: 100vw; height: 100vh; background-color: black; color: rgb(232, 232, 232); font-family: Menlo, Consolas, monospace; font-size: large; padding: 2rem; line-height: 1.2; white-space: pre-wrap; overflow: auto;"><span style="color: #E36049">Failed to compile.</span><br><br>Error in ./src/WeatherPage.js
+Syntax error: Unexpected token, expected , (22:56)
+
+<span style="font-weight:normal;opacity:1;color:#transparent;background:#transparent;"> <span style="color:#6D7891;"> 20 | </span>					fetch(url)<span style="color:#FFD080;">.</span>then(data <span style="color:#FFD080;">=&gt;</span> data<span style="color:#FFD080;">.</span>json())<span style="color:#FFD080;">.</span>then(cityData <span style="color:#FFD080;">=&gt;</span> resolve({city<span style="color:#FFD080;">:</span>cityData<span style="color:#FFD080;">.</span>results[<span style="color:#7FACCA;">1</span>]<span style="color:#FFD080;">.</span>formatted_address}))
+ <span style="color:#6D7891;"> 21 | </span>				})<span style="color:#FFD080;">;</span>
+<span style="color:#E36049;"><span style="font-weight:bold;">&gt;</span></span><span style="color:#6D7891;"> 22 | </span>				getCity<span style="color:#FFD080;">.</span>then(city <span style="color:#FFD080;">=&gt;</span> <span style="color:#C3C2EF;">this</span><span style="color:#FFD080;">.</span>setState({city<span style="color:#FFD080;">:</span>city<span style="color:#FFD080;">.</span>city})<span style="color:#FFD080;">;</span>
+ <span style="color:#6D7891;">    | </span>				                                                    <span style="color:#E36049;"><span style="font-weight:bold;">^</span></span>
+ <span style="color:#6D7891;"> 23 | </span>				resolve({lat<span style="color:#FFD080;">:</span>position<span style="color:#FFD080;">.</span>coords<span style="color:#FFD080;">.</span>latitude<span style="color:#FFD080;">,</span>
+ <span style="color:#6D7891;"> 24 | </span>						 lon<span style="color:#FFD080;">:</span>position<span style="color:#FFD080;">.</span>coords<span style="color:#FFD080;">.</span>longitude})<span style="color:#FFD080;">;</span>
+ <span style="color:#6D7891;"> 25 | </span>			})<span style="color:#FFD080;">;</span></span>
+
+ @ ./src/index.js 19:19-46</div></body></html>

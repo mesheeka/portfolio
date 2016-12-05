@@ -10,7 +10,7 @@ class WeatherIcon extends Component {
 	}
 	render() {
 		return (
-			<span><canvas id='icon' width="64" height="64"></canvas></span>
+			<span><canvas id='icon' width="91" height="91"></canvas></span>
 		);
 	}
 }

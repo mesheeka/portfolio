@@ -1,16 +1,18 @@
 import React, {Component} from 'react';
 import WeatherIcon from './WeatherIcon.js';
+import DarkskyLogo from './DarkskyLogo.png';
 
 class Weather extends Component {
 	
 	render() {
 		return (
 			<div>
-				<h3>The weather is</h3>
+				<h3>The weather in</h3>
 				<h1>{this.props.weatherData.city}</h1>
 				<WeatherIcon icon={this.props.weatherData.icon}/>
-				<p>{this.props.weatherData.summary}</p>
+				<h2>{this.props.weatherData.summary}</h2>
 				<h1>{this.props.weatherData.temp}&deg;F</h1>
+				<a href='https://darksky.net/poweredby/'><img src={DarkskyLogo} alt='Darksky logo' height='50'></img></a>
 			</div>
 		);
 	}
