@@ -4,10 +4,8 @@ import {Link} from 'react-router';
 
 class Header extends Component {
 	render() {
-		let headerStyle={display:'flex',
-						 };
 		return(
-			<div style={headerStyle}>
+			<div>
 				<h1>Adrian's Portfolio</h1>
 	            <ul role='navigation'>
 	            	<li><Link to='/' onlyActiveOnIndex={true}>Home</Link></li>
