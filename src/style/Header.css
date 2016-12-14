@@ -1,0 +1,14 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+.title {
+	padding-left: 10px;
+}
+
+.listItem {
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+}

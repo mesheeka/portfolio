@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import './style/Footer.css';
 
 class Footer extends Component {
 	render() {
 		return (
-			<p>MesheekaTlaloc-MassArtFlow-Music=Life</p>
+			<footer className='footer'>MesheekaTlaloc-MassArtFlow-Music=Life</footer>
 		);
 	}
 }

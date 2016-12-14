@@ -42,8 +42,6 @@ class WeatherPage extends Component {
 	render() {		
 		return (
 			<div>
-				<h1>Weather app</h1>
-				<p>A simple react app that displays the users current weather. I use Darksky and Google api's for this app.</p> 
 				{this.state.show ? <Weather weatherData={this.state}/> : <p>...trying to get weather</p>}			
 			</div>
 		);
